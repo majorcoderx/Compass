@@ -5,6 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 using Windows.Storage;
 
+/// <summary>
+/// Code auto generation
+/// </summary>
+
 namespace Laban
 {
     public class LocalValueControl

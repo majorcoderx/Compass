@@ -30,3 +30,35 @@ c:\users\do\documents\visual studio 2013\Projects\Compass\Compass\obj\Debug\qual
 c:\users\do\documents\visual studio 2013\Projects\Compass\Compass\obj\Debug\qualifiers.txt.intermediate
 c:\users\do\documents\visual studio 2013\Projects\Compass\Compass\obj\Debug\MultipleQualifiersPerDimensionFound.txt
 c:\users\do\documents\visual studio 2013\Projects\Compass\Compass\obj\Debug\ProjectArchitectures.txt
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\App.xbf
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\MainPage.xbf
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\Compass.xr.xml
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\Compass.exe
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\Compass.pdb
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\resources.pri
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\AppxManifest.xml
+D:\Users\spider man\Documents\GitHub\Compass\Compass\bin\Debug\Laban.build.appxrecipe
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\App.g.i.cs
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\App.g.cs
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\MainPage.g.i.cs
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\MainPage.g.cs
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\XamlTypeInfo.g.cs
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\App.xaml
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\MainPage.xaml
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\App.xbf
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\MainPage.xbf
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\XamlSaveStateFile.xml
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\Compass.exe
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\Compass.pdb
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\priconfig.xml
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\priconfig.xml.intermediate
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\layout.resfiles
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\layout.resfiles.intermediate
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\resources.resfiles
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\resources.resfiles.intermediate
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\pri.resfiles
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\pri.resfiles.intermediate
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\qualifiers.txt
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\qualifiers.txt.intermediate
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\MultipleQualifiersPerDimensionFound.txt
+D:\Users\spider man\Documents\GitHub\Compass\Compass\obj\Debug\ProjectArchitectures.txt

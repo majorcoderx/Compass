@@ -1,23 +1,18 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Linq;
-using System.Runtime.InteropServices.WindowsRuntime;
-using Windows.Foundation;
-using Windows.Foundation.Collections;
 using Windows.UI.Xaml;
 using Windows.UI.Xaml.Controls;
-using Windows.UI.Xaml.Controls.Primitives;
-using Windows.UI.Xaml.Data;
 using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 using Windows.Devices.Sensors;
-using Windows.Storage;
 using Windows.UI.Xaml.Media.Imaging;
 using Windows.UI.Popups;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
+/// <summary>
+/// Author: Nguyen Van Do
+/// Date: 2015
+/// </summary>
 
 namespace Laban
 
@@ -41,12 +36,12 @@ namespace Laban
         {
             string check = LocalValueControl.GetValueLocalSetting();
             int count = LocalValueControl.GetValueLocalSet();
-            if(count==4)
+            if (count == 4)
             {
                 RatingApp();
                 LocalValueControl.SetCountValueLocalSet(++count);
             }
-            else if(count<5)
+            else if (count < 5)
             {
                 LocalValueControl.SetCountValueLocalSet(++count);
             }
@@ -104,7 +99,7 @@ namespace Laban
                     hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/ton.png", UriKind.Absolute));
                 }
             }
-            
+
             Rotate();
             try
             {
@@ -114,7 +109,7 @@ namespace Laban
             {
                 ShutdownApp();
             }
-            
+
         }
 
         private async void RatingApp()
@@ -129,20 +124,20 @@ namespace Laban
             {
                 _dispatcherTimer = new DispatcherTimer();
                 _dispatcherTimer.Tick += DisplayCompass;
-                _dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0,1);
+                _dispatcherTimer.Interval = new TimeSpan(0, 0, 0, 0, 1);
             }
         }
 
-        private void DisplayCompass(object sender,object args)
+        private void DisplayCompass(object sender, object args)
         {
             CompassReading reading = _compass.GetCurrentReading();
-            if (reading != null&&turnOnCompass)
+            if (reading != null && turnOnCompass)
             {
 
                 double toado = Math.Round(reading.HeadingMagneticNorth, 1);
                 ((RotateTransform)hinhlaban.RenderTransform).Angle = -toado;
-               // System.Diagnostics.Debug.WriteLine(reading.HeadingTrueNorth);
-                if (toado >= 0 && toado <= 22.5|| toado > 337.5 && toado <= 360)
+                // System.Diagnostics.Debug.WriteLine(reading.HeadingTrueNorth);
+                if (toado >= 0 && toado <= 22.5 || toado > 337.5 && toado <= 360)
                 {
                     Huong.Text = "Bắc " + (int)toado;
                     if (toado >= 0 && toado <= 22.5)
@@ -186,14 +181,14 @@ namespace Laban
                 else if (toado > 247.5 && toado <= 292.5)
                 {
                     Huong.Text = "Tây " + (int)toado;
-                    Toa.Text = "Tọa: Đông "+((int)toado - 180);
+                    Toa.Text = "Tọa: Đông " + ((int)toado - 180);
                 }
                 else
                 {
                     Huong.Text = "Tây Bắc " + (int)toado;
                     Toa.Text = "Tọa: Đông Nam " + ((int)toado - 180);
                 }
-                
+
             }
         }
 
@@ -223,6 +218,7 @@ namespace Laban
             }
         }
 
+        // Turn off compass
         private void TurnoffCompass_Click(object sender, RoutedEventArgs e)
         {
             if (turnOnCompass)
@@ -246,7 +242,8 @@ namespace Laban
         private bool openMenu = false;
         private bool turnOnCompass = true;
 
-        private void CleanCheck(int val)
+        // Clear compass type checked
+        private void ClearCheck(int val)
         {
             if (val == 0)
             {
@@ -351,15 +348,15 @@ namespace Laban
 
         private void Laban_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(0);
+            ClearCheck(0);
             LabanCheck.IsChecked = true;
-            hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/laban.png",UriKind.Absolute));
+            hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/laban.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban");
         }
 
         private void Laban1_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(1);
+            ClearCheck(1);
             Laban1Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/can.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban1");
@@ -367,7 +364,7 @@ namespace Laban
 
         private void Laban2_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(2);
+            ClearCheck(2);
             Laban2Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/cann.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban2");
@@ -375,7 +372,7 @@ namespace Laban
 
         private void Laban3_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(3);
+            ClearCheck(3);
             Laban3Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/chan.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban3");
@@ -383,7 +380,7 @@ namespace Laban
 
         private void Laban4_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(4);
+            ClearCheck(4);
             Laban4Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/doai.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban4");
@@ -391,7 +388,7 @@ namespace Laban
 
         private void Laban5_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(5);
+            ClearCheck(5);
             Laban5Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/kham.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban5");
@@ -399,7 +396,7 @@ namespace Laban
 
         private void Laban6_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(6);
+            ClearCheck(6);
             Laban6Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/khon.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban6");
@@ -407,7 +404,7 @@ namespace Laban
 
         private void Laban7_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(7);
+            ClearCheck(7);
             Laban7Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/ly.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban7");
@@ -415,7 +412,7 @@ namespace Laban
 
         private void Laban8_Checked(object sender, RoutedEventArgs e)
         {
-            CleanCheck(8);
+            ClearCheck(8);
             Laban8Check.IsChecked = true;
             hinhlaban.Source = new BitmapImage(new Uri("ms-appx:///Assets/Images/ton.png", UriKind.Absolute));
             LocalValueControl.SettingLocalValue("laban8");
@@ -473,9 +470,10 @@ namespace Laban
                 char[] text = InputOld.Text.ToCharArray();
                 foreach (char a in text)
                 {
-                    total += Convert.ToInt32(new String(a,1));
+                    total += Convert.ToInt32(new String(a, 1));
                 }
             }
+            // Calculate for Cung Menh
             int val = total % 9;
             System.Diagnostics.Debug.WriteLine(total);
             if (checkFemale)
@@ -563,5 +561,5 @@ namespace Laban
             checkMale = false;
         }
     }
-    
+
 }

@@ -7,7 +7,7 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-	
+
 
     <Grid Background="White">
         <Grid.RowDefinitions>
@@ -19,7 +19,7 @@
                 <TextBlock HorizontalAlignment="Right" Text="La bàn ngũ hành" FontFamily="ms-appx:///Assets/Fonts/UVNMuaThu.TTF#UVN Mua Thu" 
                            FontSize="40" Foreground="White" Margin="0,5,20,0"/>
                 <Border Width="80" Height="75" Background="Red" BorderBrush="Red" Tapped="Image_Tapped" HorizontalAlignment="Left">
-                    <Image x:Name="image" Source="ms-appx:///Assets/Images/menu.png" HorizontalAlignment="Left" Width="40" Margin="20,0,0,0"/>    
+                    <Image x:Name="image" Source="ms-appx:///Assets/Images/menu.png" HorizontalAlignment="Left" Width="40" Margin="20,0,0,0"/>
                 </Border>
             </Grid>
         </Grid>
@@ -59,7 +59,7 @@
                 <Button x:Name="TurnOffCompass" Margin="0,0,15,0" VerticalAlignment="Center" Content="Tắt la bàn" Background="Red" Click="TurnoffCompass_Click" HorizontalAlignment="Right"/>
             </Grid>
         </StackPanel>
-       
+
         <Popup Name="MenuChoose" Margin="20,150,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
             <Grid>
                 <Border Background="Silver" Opacity="0.9"/>
@@ -79,7 +79,7 @@
                         <Button Content="Đóng lại" Click="ConfirmChooseCompass_Click" HorizontalAlignment="Center"/>
                     </StackPanel>
                 </StackPanel>
-                
+
             </Grid>
         </Popup>
         <Popup x:Name="Choose_Old">
